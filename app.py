@@ -1,11 +1,12 @@
 from boggle import Boggle
 from flask import Flask, redirect, request,flash, render_template, session, jsonify
+import os
 
 boggle_game = Boggle()
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'helloCheesecakeMyOldFriend'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def home():
