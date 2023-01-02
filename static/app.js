@@ -122,35 +122,3 @@ countDown()
 //     }
 //     localStorage.setItem('highScores', JSON.stringify(scoreList));
 // }
-
-
-// async function postUserScore() {
-//     // send user score to flask using post request
-//     const response = await axios({
-//         method: 'POST', 
-//         url: '/record-score',
-//         contentType: 'application/json;charset=UTF-8',
-//         data:{'score':userScore}
-//     }
-//     )
-// }
-
-// async function getUserInput() {
-//     // send user input to flask back end using JSON
-//     const data = userInput.value;
-//     const response = await axios({
-//         method: "POST",
-//         url: "/add-word", 
-//         contentType: 'application/json;charset=UTF-8',
-//         data: {'message':data}
-//     })
-//     // checks response from the server and provides feedback message to user
-//     server_response = response.data['result']
-//     checkTheWord(server_response, data)
-//     // clears out the feedback message to user
-//     setTimeout(()=>{
-//         userMesssages.textContent=''
-//         userMesssages.classList = []
-//         userMesssages.classList.add('user-messages')
-//     }, 3000)
-// }
