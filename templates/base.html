@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Boggle {% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='static/app.css'>
+</head>
+<body>
+    <nav class='navbar'>
+        <a href='/'>Home</a>
+        <a href='/high-scores'>High Scores</a>
+    </nav>
+
+        {% block content %}
+
+
+        {% endblock %}
+
+    <footer>
+        <a href='#'>Contact Us </a>
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

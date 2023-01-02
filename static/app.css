@@ -1,0 +1,293 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #89C4E1;
+}
+/* -----------------------------------------------  Welcome message -------------------------------------------------*/
+
+.title-plaque {
+    position: relative;
+    top: 70px;
+    margin-left: 180px;
+    width: fit-content;
+    block-size: fit-content;
+
+    display: block;
+    padding: 1px 30px;
+    background-color: #144272;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 3px rgba(255, 255, 255, 0.25);
+}
+
+.title {
+    color: #EAFDFC;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/* -----------------------------------------------  User Messages -------------------------------------------------*/
+.user-messages {
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+    width: fit-content;
+
+}
+
+.success {
+    left: 200px;
+    background-color: rgb(69, 150, 69);
+    color: whitesmoke;    
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+
+.error {
+    left: 100px;
+    background-color: rgb(209, 86, 86);
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* -----------------------------------------------  User Current Score -------------------------------------------------*/
+
+.user-score {
+    display: inline-block;
+    color: #142B4A;
+    font-family: cursive;
+    padding: 5px 20px;
+}
+
+/* -----------------------------------------------  Navbar -------------------------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #243763;
+    padding: 20px;
+    z-index: 1;
+}
+
+.navbar a {
+    color: #EAFDFC;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3rem;
+}
+.navbar a:hover {
+    background-color: #2C74B3;
+}
+/* -----------------------------------------------  Footer -------------------------------------------------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #243763;
+    padding: 20px;
+}
+
+footer a {
+    color: #EAFDFC;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* -----------------------------------------------  Game Area -------------------------------------------------*/
+
+.main-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 30px;
+    grid-template-areas: 
+    "area-1 area-2 area-4"
+    "area-1 area-3 area-4";
+}
+
+/* -----------------------------------------------  Game Board -------------------------------------------------*/
+.board {
+    position: relative;
+    display: flex;
+    top: 80px;
+    margin-left: 100px;
+    width: fit-content;
+    block-size: fit-content;
+    padding: 20px;
+    grid-area: area-1;
+
+    background-color: #205295;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.4), inset 5px 5px 3px rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+}
+
+.board-indent {
+    position: relative;
+    display: inline-block;
+    width: 570px;
+    padding: 5px;
+    background: #163763;
+    box-shadow: 3px 3px 3px #3A7ACF, inset 5px 5px 10px #142B4A;
+    border-radius: 20px;
+}
+/* -----------------------------------------------  Letter Cubes -------------------------------------------------*/
+.letter-cube {
+    display: inline-block;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+
+    background: #EEEEEE;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 1), inset 2px 2px 3px #DBDBDB, inset -3px -3px 3px #CECECE;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.letter {
+    position: relative;
+    top: 10px;
+
+    color: #144272;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+}
+
+/* -----------------------------------------------  Letters found by user -------------------------------------------------*/
+
+.words-found-frame {
+    grid-area: area-2;
+    top: 0px;
+    min-width: 400px;
+    max-width: 400px;
+    height: 500px;
+    border-radius: 3px;
+    background-color: #EAFDFC;
+    box-shadow: 0 4px 14px rgba(0,0,0,.5);
+}
+
+.words-found {
+    color:#142B4A;
+    font-family: cursive; 
+    list-style: none;   
+}
+
+/* -----------------------------------------------  rules -------------------------------------------------*/
+
+.rules {
+    grid-area: area-3;
+    max-width: 400px;
+    background-color: #205295;
+    border-radius: 10px;
+    color: #DBDBDB;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 3px rgba(255, 255, 255, 0.25);
+}
+
+.rules-text {
+    margin: 10px 20px;
+}
+
+#word-input {
+    margin-bottom: 15px;
+}
+
+#word-input:disabled {
+    background-color: gray;
+}
+
+ul {
+    margin: 10px;
+    font-size: 0.9rem;
+}
+
+#check-word-button {
+    margin-left: 20px;
+    background: #EAFDFC;
+    color: #163763;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+}
+
+#check-word-button:hover {
+    background: #89C4E1;
+}
+
+#check-word-button:active {
+    background: #31a8e4;
+    color: #EEEEEE;
+}
+
+#check-word-button:disabled {
+    background-color: #CCC;
+    color: rgba(54, 53, 53,0.6);
+
+}
+
+
+/* -----------------------------------------------  timer -------------------------------------------------*/
+.timer {
+    grid-area: area-4;
+    background-color: #144272;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 3px rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#DBDBDB
+}
+
+.timer-display-frame {
+    width: 100px;
+    height: 40px;
+    margin-left: 50px;
+    background-color: #EAFDFC;
+    box-shadow: 2px 2px 4px #3A7ACF, inset 2px 2px 4px #142B4A;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.timer-display {
+    color: #205295;
+    font-size: 2rem;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.game-over{
+    left: 150px;
+    background-color: #205295;
+    color: whitesmoke;    
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 3px rgba(255, 255, 255, 0.25);
+    padding: 15px 20px;
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+}
+
+/* -----------------------------------------------  high scores -------------------------------------------------*/
+
+.scores-frame {
+    position: relative;
+    top: 70px;
+    left: 100px;
+}
+
+.high-scores {
+    font-family: 'Concert One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #205295;
+    font-size: 2rem;
+}

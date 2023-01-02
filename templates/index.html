@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Boggle Game{%endblock%}
+
+{% block content %}
+<div class='title-plaque'>
+    <h1 class='title'>Time to play Boggle!!!</h1>
+</div>
+<div class='main-box'>
+    <div class='board'>
+        <div class='user-messages'>
+        </div>
+        <div class='board-indent'>
+        {% for row in game_board %}
+            {% for cell in row %}
+                <div class='letter-cube'><span class='letter'>{{cell}}</span></div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    </div>
+
+
+    <div class='words-found-frame'>
+        <p class='user-score'> 
+            Score:<span id='score'>0</span>
+        </p>
+        <p class='user-score'>
+            Number of trials: 
+            <span id='visit-counter'>{{ game_attempts }}</span>        
+        </p>
+        <ul class='words-found'>
+
+        </ul>
+    </div>
+    <div class='rules'>
+        <p class='rules-text'>Boggle game rules:</p>
+        <ul>
+            <li>Each letter after the first must be a horizontal, vertical, or diagonal neighbor of the one before it.</li>
+            <li>No individual letter cube may be used more than once in a word.</li>
+            <li>No capitalized or hyphenated words are allowed.</li>
+        </ul>
+        
+        <p class='rules-text'>If you find a word on the board, Enter it here</p>
+        <form action='/add-word' method='POST' class='words-form'>
+            <label for='word-input' class='rules-text'>Word:</label>
+            <input type='text' name='word' id='word-input'>
+            <button type='submit' id='check-word-button'>Submit</button>
+        </form>
+    </div>
+
+    <div class='timer'>
+        <p>Timer</p>
+        <div class='timer-display-frame'>
+            <p class='timer-display'></p>
+        </div>
+<div>
+
+    <script src='static/app.js'></script>
+{% endblock %}
