@@ -6,6 +6,7 @@ This project was created using Python, JavaScript, CSS and HTML.
 - Backend of the application is created using python module Flask which is a web application framework.
 - Fontend is handled with JavaScript and AJAX Javascript library for handling frontend http requests. 
 - CSS handles all of the styling of the application.
+This project does not use any databases for storage of data. User's scores and number of visits are stored in cookies and handled by flask session
 
 ## Game Rules:
 When the user enters the home page the timer starts counting down from 60 seconds. 
@@ -22,8 +23,11 @@ Each time the user visits the page their visit is recorded in cookies using flas
 During the game user recieves feedback messages based on the words they enter.
 These messages are handled by JavaScript and AJAX Javascript library. 
 Each message is set to disapear after 3 seconds. 
+Success! The word user entered does exist and they have not found it previously
 ![image of message to the user - great job](static/imgs/great.jpg)
+Error! The word user entered does not exist on a game board
 ![mimage of message to the user - error](static/imgs/on_board.jpg)
+Error! The word user entered has already been found by user and has been recorded. 
 ![image of message to the user - error](static/imgs/found.jpg)
 
 At the end of the game user also recieves the message that time is up indicating that the game is over. 
