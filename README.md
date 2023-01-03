@@ -6,6 +6,7 @@ This project was created using Python, JavaScript, CSS and HTML.
 - Backend of the application is created using python module Flask which is a web application framework.
 - Fontend is handled with JavaScript and AJAX Javascript library for handling frontend http requests. 
 - CSS handles all of the styling of the application.
+
 This project does not use any databases for storage of data. User's scores and number of visits are stored in cookies and handled by flask session
 
 ## Game Rules:
