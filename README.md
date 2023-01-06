@@ -9,6 +9,24 @@ This project was created using Python, JavaScript, CSS and HTML.
 
 This project does not use any databases for storage of data. User's scores and number of visits are stored in cookies and handled by flask session
 
+### How to get started with Boggle Game
+1. Download the zip file and extract the contents.
+2. Using terminal go to the location of the file and open it
+3. Create a virtual environment 
+  - `python -m venv venv`
+4. Activate the virtual environment to containarize installation of required python packages
+  - `venv\scripts\activate`
+  - you'll know that venv has been activated when you see (venv) infront of your directory path
+5. Install required python packages for the poject that are listed in requirements.txt file
+  - `pip install -r requirements.txt`
+6. Run Boggle game in the terminal window
+  - `python app.py`
+
+Running tests
+In the terminal while venv is activated
+`python -m unittest test_app.py`
+
+
 ## Game Rules:
 When the user enters the home page the timer starts counting down from 60 seconds. 
 During that time user needs to find any many words as possible by using the letters on the game board cubes. 
