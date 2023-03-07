@@ -1,15 +1,14 @@
 # boggle
-![image of boggle game home screen](static/imgs/main.jpg)
+![image of pea pods logo](static/imgs/PeaPods_welcome.png)
 ## About The Project
-**Boggle game is a fun word finding game**
-This project was created using Python, JavaScript, CSS and HTML. 
-- Backend of the application is created using python module Flask which is a web application framework.
-- Fontend is handled with JavaScript and AJAX Javascript library for handling frontend http requests. 
-- CSS handles all of the styling of the application.
+**PeaPods**
+PeaPods is designed for teams wanting to know more about eachother at a quick glance.
+- Create a Pod for your company.
+- Invite your team members.
+- Everyone adds hobbies/interests to their profile.
+- Connect with other team members based on common hobbies/interests.
 
-This project does not use any databases for storage of data. User's scores and number of visits are stored in cookies and handled by flask session
-
-### How to get started with Boggle Game
+### How to get started with PeaPods
 1. Download the zip file and extract the contents.
 2. Using terminal go to the location of the file and open it
 3. Create a virtual environment 
@@ -19,36 +18,31 @@ This project does not use any databases for storage of data. User's scores and n
   - you'll know that venv has been activated when you see (venv) infront of your directory path
 5. Install required python packages for the poject that are listed in requirements.txt file
   - `pip install -r requirements.txt`
-6. Run Boggle game in the terminal window
+6. Run PeaPods in the terminal window
   - `python app.py`
+  
+Some functionality will not work because of environment variables that are not included with the files.
+- open weather map API
+- Trip Advisor API
+- Sending email credentials.
 
-Running tests
-In the terminal while venv is activated
-`python -m unittest test_app.py`
+## Features:
+- Create only one pod for team, company, organization.
+-- Then invite members to the pod.
+-- Members will be assigned to the pod automatically based on the email provided at sign up.
+-- Members can leave pod and then start their own pod (for when user leave teams, organizations, companies)
+-- Members can create sub-pods which are smaller groups that can be focused on team members interests like "hiking"
+-- Members can post messages inside main pod and sub-pods they are part of.
+-- Members can leave sub-pods.
+-- Members add their hobbies and interests. 
+-- User dashboard will display all other team members and highlight hobbies that are incommon with the current logged in user. They are sorted in descending order.
 
+## Pods and Sub-Pods:
+![image of examples of pods and sub-pods](static/imgs/Pods_examples.png)
+- User can see the man Pod, and the Sub-Pods they are part of. 
 
-## Game Rules:
-When the user enters the home page the timer starts counting down from 60 seconds. 
-During that time user needs to find any many words as possible by using the letters on the game board cubes. 
-- Words must be at least three letters in length.
-- Each letter after the first must be a horizontal, vertical, or diagonal neighbor of the one before it.
-- No individual letter cube may be used more than once in a word.
-- No capitalized or hyphenated words are allowed.
-When the timer runs out user score will be sent to backend and will be stored in cookies using flask session.
-User can view their scores on a "High Scores" page.
-Each time the user visits the page their visit is recorded in cookies using flask session and then displayed in "Number of Trials"
-
-## Feedback messages for the user:
-During the game user recieves feedback messages based on the words they enter.
-These messages are handled by JavaScript and AJAX Javascript library. 
-Each message is set to disapear after 3 seconds. 
-- Success! The word user entered does exist and they have not found it previously
-- ![image of message to the user - great job](static/imgs/great.jpg)
-- Error! The word user entered does not exist on a game board
-- ![mimage of message to the user - error](static/imgs/on_board.jpg)
-- Error! The word user entered has already been found by user and has been recorded. 
-- ![image of message to the user - error](static/imgs/found.jpg)
-
-At the end of the game user also recieves the message that time is up indicating that the game is over. 
-User input field and submit buttons are disabled at this time to prevent any further user inputs. 
-- ![image of message to the user - time is up](static/imgs/boggle_time_up.jpg)
+## Team Members matching:
+![image of examples of team members sorted by interests](static/imgs/Pods_members_examples.png)
+- Current user is listed first
+- All other members are sorted in descending order based on the number of hobbies that match the current user.
+- Current user can click on each team member to view their profile which will include full list of hobbies and interests.
